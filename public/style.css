@@ -365,3 +365,14 @@ main {
 .site-footer a {
     color: #173f38;
 }
+body {
+    background-color: #f8fafc;
+    background-image: url("/nature-background.png");
+    background-position: center top;
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+}
+
+main {
+    background: rgba(248, 250, 252, 0.92);
+}
