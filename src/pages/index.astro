@@ -2,39 +2,209 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Home | Leihaopam Leisan">
-    <section class="hero">
-        <h1>Hi, I'm Appam Leisan.</h1>
-        <h2>Web Designer &amp; Developer</h2>
-        <p>
-            I design and develop responsive, user-friendly websites with a focus on
-            clean design, functionality, and great user experiences.
+<Layout>
+    <link slot="head" rel="stylesheet" href="/index.css" />
+
+    <section class="home-hero">
+        <div class="hero-content">
+            <p class="eyebrow">ACADEMIC PORTFOLIO</p>
+
+            <h1>Leihaopam Leisan</h1>
+
+            <p class="hero-tagline">
+                Designing technology that more people can use.
+            </p>
+
+            <p class="hero-description">
+                I’m an aspiring Human–Computer Interaction researcher
+                interested in accessibility for blind people and people
+                with cognitive disabilities. Through web development
+                and future research, I hope to explore how digital
+                experiences can become more accessible and usable.
+            </p>
+
+            <div class="hero-actions">
+                <a class="button button-primary" href="#projects">
+                    Explore My Work →
+                </a>
+                <a
+                    class="button button-outline"
+                    href="/resume.pdf"
+                    download="Leihaopam_Leisan_CV.pdf"
+                >
+                    Download Resume (PDF) ↓
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-portrait">
+        <img
+            src="/profile.jpg"
+            alt="Portrait of Leihaopam Leisan"
+            class="profile-photo"
+        />
+    </div>
+    </section>
+
+    <section class="home-section" id="research">
+        <div class="section-heading">
+            <p class="eyebrow">LOOKING AHEAD</p>
+            <h2>Research Interests</h2>
+            <p>
+                The questions and topics I hope to explore through
+                graduate study.
+            </p>
+        </div>
+
+        <div class="research-grid">
+                
+        <article class="research-item">
+            <span class="item-number">01</span>
+            <h3>Nonvisual Interaction</h3>
+            <p>
+            Exploring how screen readers, audio, and touch can help
+            blind people navigate and interact with digital technology.
         </p>
-        <div class="hero-actions">
-            <a class="hero-button" href="/projects">View My Work</a>
+        </article>
+
+        <article class="research-item">
+            <span class="item-number">02</span>
+            <h3>Cognitive Accessibility</h3>
+        <p>
+            Investigating how clear navigation, understandable content,
+            and adaptable interfaces can support people with cognitive
+            disabilities.
+        </p>
+    </article>
+
+        <article class="research-item">
+            <span class="item-number">03</span>
+            <h3>Participatory Design</h3>
+            <p>
+                Learning how to design and evaluate technology with people
+                with disabilities, guided by their experiences, needs,
+                and preferences.
+            </p>
+        </article>
+
+        </div>
+    </section>
+
+    <section class="home-section" id="projects">
+        <div class="section-heading">
+            <p class="eyebrow">BUILDING & LEARNING</p>
+            <h2>Selected Work</h2>
+        </div>
+
+        <div class="work-grid">
+            <article class="work-card">
+                <div class="work-preview preview-culture">
+                    <span>HERITAGE · IDENTITY · COMMUNITY</span>
+                    <h3>My Tangkhul Culture</h3>
+                </div>
+
+                <div class="work-content">
+                    <p class="project-category">WEB DEVELOPMENT</p>
+                    <h3>Tangkhul Culture Website</h3>
+                    <p>
+                        A website sharing Tangkhul language, traditions,
+                        food, music, and cultural heritage.
+                    </p>
+                    <a
+                        class="text-link"
+                        href="https://appam23.github.io/Tangkhul_Culture/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Visit Tangkhul Culture website ↗
+                    </a>
+                </div>
+            </article>
+
+            <article class="work-card">
+                <div class="work-preview preview-development">
+                    <span>DESIGN · BUILD · REFINE</span>
+                    <h3>Web Development</h3>
+                </div>
+
+                <div class="work-content">
+                    <p class="project-category">DESIGN & DEVELOPMENT</p>
+                    <h3>Sandhill Media Group</h3>
+                    <p>
+                        WordPress page design, content updates, and website
+                        maintenance for ICON Gaming, Radio Hex, and Score Medicare.
+                    </p>
+                        <a class="text-link" href="/projects#professional-work">
+                            View professional work →
+                        </a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="home-section about-section" id="about">
+        <div class="section-heading">
+            <p class="eyebrow">MY JOURNEY</p>
+            <h2>About & Education</h2>
+        </div>
+
+        <div class="about-content">
+        
+            <div class="education-details">
+                <h3>Brigham Young University–Idaho</h3>
+            <p>
+                Web Design and Development<br />
+                Expected graduation: July 22, 2027
+            </p>
+            </div>
+            <p>
+                My experience includes building responsive websites and
+                updating WordPress webpages. This work has sparked my
+                interest in how design decisions affect people’s ability
+                to access information and use digital tools.
+            </p>
+
+            <p>
+                I hope to pursue doctoral study in Human–Computer
+                Interaction, focusing on accessibility for blind people
+                and people with cognitive disabilities. I want to learn
+                how to involve people with disabilities throughout
+                the design and evaluation process.
+            </p>
+            <a class="text-link" href="/about">More about me →</a>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div>
+            <p class="eyebrow">GET IN TOUCH</p>
+            <h2>Let’s connect.</h2>
+            <p>
+                I welcome conversations about research,
+                learning, and collaboration.
+            </p>
+        </div>
+
+        <div class="contact-links">
+            <a class="button button-primary" href="/contact">
+                Contact Me →
+            </a>
             <a
-                class="hero-button hero-button-secondary"
-                href="https://github.com/Appam23?tab=repositories"
+                class="text-link"
+                href="https://github.com/Appam23"
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                GitHub
+                GitHub ↗
             </a>
             <a
-                class="hero-button hero-button-secondary"
-                href="https://linkedin.com/in/leisan23/"
+                class="text-link"
+                href="https://www.linkedin.com/in/leisan23/"
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                LinkedIn
-            </a>
-            <a class="hero-button hero-button-secondary" href="/RESUME.docx" download>
-                Download Resume
+                LinkedIn ↗
             </a>
         </div>
-        <p class="hero-skills">
-            HTML &bull; CSS &bull; JavaScript &bull; WordPress &bull; C# &bull; Python
-            &bull; MySQL
-        </p>
     </section>
 </Layout>

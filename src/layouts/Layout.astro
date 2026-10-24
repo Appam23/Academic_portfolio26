@@ -1,46 +1,53 @@
 ---
-const { title = "Leihaopam Leisan Portfolio" } = Astro.props;
+const { title = "Leihaopam Leisan | Academic Portfolio" } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title}</title>
-    <link rel="stylesheet" href="/style.css">
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Leihaopam Leisan's academic portfolio, projects, and research interests."
+        />
+        <title>{title}</title>
+        <link rel="stylesheet" href="/style.css" />
+        <slot name="head" />
+    </head>
 
-<body id="top">
-    <header>
-        <h1>Leihaopam Leisan</h1>
-        <p>Entry-Level Web Developer and Designer</p>
-    </header>
-
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/projects">Projects</a>
-        <a href="/skills">Skills</a>
-        <a href="/contact">Contact</a>
-    </nav>
-
-    <main>
-        <slot />
-    </main>
-
-    <footer>
-        <div class="footer-links">
-            <a href="https://github.com/Appam23?tab=repositories" target="_blank" rel="noopener noreferrer">
-                GitHub
+    <body id="top">
+        <a class="skip-link" href="#main-content">
+            Skip to main content
+        </a>
+        <header class="site-header">
+             <a class="site-name" href="/">
+                <img src="/My_logo.png" alt="" class="header-logo" />
+                <span>Leihaopam Leisan</span>
             </a>
-            <a href="https://www.linkedin.com/in/leisan23/" target="_blank" rel="noopener noreferrer">
-                LinkedIn
-            </a>
-            <a href="/RESUME.docx" download>Resume</a>
-            <a href="#top">Back to top</a>
-        </div>
-        <p>&copy; 2026 Appam Leisan</p>
-    </footer>
-</body>
+
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="/#research">Research</a>
+                <a href="/#projects">Projects</a>
+                <a href="/#about">About</a>
+                <a
+                    href="/resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Resume
+                </a>
+                <a href="/#contact">Contact</a>
+            </nav>
+        </header>
+
+        <main id="main-content" tabindex="-1">
+            <slot />
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; {new Date().getFullYear()} Leihaopam Leisan</p>
+            <a href="#top">Back to top ↑</a>
+        </footer>
+    </body>
 </html>

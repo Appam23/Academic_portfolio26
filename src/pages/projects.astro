@@ -3,36 +3,85 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Projects | Leihaopam Leisan">
-    <article id="projects" class="project-card">
+
+    <link slot="head" rel="stylesheet" href="/project.css" />
+
+    <a class="button button-outline back-home" href="/">
+    ← Back to Home
+    </a>
+
+    <div class="projects-layout">
+    <div class="personal-work">
+
+ <section class="home-section" id="tangkhul-culture">
+    <p class="eyebrow">WEB DEVELOPMENT · CULTURAL HERITAGE</p>
+    <h1>Tangkhul Culture Website</h1>
+
+    <img
+        class="culture-image"
+        src="/tangkhul-meadow.png"
+        alt="A green meadow with a broad tree"
+    />
+
+    <p>
+        A website sharing Tangkhul language, traditions, food,
+        music, celebrations, and natural heritage.
+    </p>
+</section>
+    
         <h2>My Projects</h2>
 
-        <h3>Personal Portfolio Website</h3>
+ <article id="projects" class="project-card">
 
-        <p>
-            This project demonstrates my HTML5, CSS, and JavaScript skills.
-        </p>
+    <h2>Personal Portfolio Website</h2>
 
-        <a
-            href="https://github.com/Appam23?tab=repositories"
-            target="_blank"
-            rel="noopener noreferrer"
+    <p>
+        This project demonstrates my web design
+        and development skills.
+    </p>
+
+    <a
+        class="text-link"
+        href="https://leisanportfolio.netlify.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Visit My Portfolio ↗
+    </a>
+</article>
+
+<article class="project-card">
+    <h2>GitHub Repositories</h2>
+
+    <p>
+        Explore my coding projects, source code,
+        and development practice.
+    </p>
+
+    <a
+        class="text-link"
+        href="https://github.com/Appam23?tab=repositories"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Explore My GitHub Repositories ↗
+    </a>
+</article>
+
+   
+        </div>
+    <section
+            id="professional-work"
+            class="featured-projects"
+            aria-labelledby="featured-projects-title"
         >
-            View My GitHub Repository Projects
-        </a>
-
-        <br>
-
-        <button id="projectButton" type="button">
-            Change Project
-        </button>
-
-        <p id="projectStatus">
-            Click the button to view another project title.
-        </p>
-    </article>
-
-    <section class="featured-projects" aria-labelledby="featured-projects-title">
         <h2 id="featured-projects-title">Featured Professional Work</h2>
+        <img
+            class="development-image"
+            src="/web_design.png"
+            alt="Illustration of website layouts on desktop, laptop, and mobile screens"
+            loading="lazy"
+        />
         <p>
             These real-world projects reflect my experience supporting live websites
             through design, content, and ongoing maintenance.
@@ -83,10 +132,12 @@ import Layout from "../layouts/Layout.astro";
                     </a>
                 </h3>
                 <p><strong>Role:</strong> Web Design &amp; Development Intern</p>
+                <p><strong>Platform:</strong> WordPress</p>
                 <p>Website content and page updates.</p>
             </article>
         </div>
     </section>
 
     <script src="/script.js" defer></script>
+    </div>
 </Layout>

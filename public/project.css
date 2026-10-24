@@ -1,0 +1,165 @@
+/* Project sections */
+#tangkhul-culture,
+.project-card,
+.featured-projects {
+    margin: 32px 0;
+    padding: clamp(24px, 4vw, 48px);
+    border: 1px solid #cbded9;
+    border-radius: 18px;
+}
+
+#tangkhul-culture {
+    background: linear-gradient(135deg, #e0efea, #f0f6f3);
+}
+
+.project-card {
+    background: var(--surface);
+}
+
+.featured-projects {
+    background: #e5eef4;
+}
+
+/* Professional work cards */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 28px;
+}
+
+.featured-project {
+    padding: 26px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--teal);
+    border-radius: 12px;
+}
+
+.featured-project h3 {
+    font-size: 1.4rem;
+}
+
+.featured-project p {
+    color: var(--muted);
+}
+
+/* Desktop: two equal-width, equal-height columns */
+@media (min-width: 1000px) {
+    .projects-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        align-items: stretch;
+        gap: 24px;
+        padding: 24px 0;
+    }
+
+    .projects-layout > * {
+        min-width: 0;
+    }
+
+    .personal-work {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .projects-layout #tangkhul-culture,
+    .projects-layout .project-card,
+    .projects-layout .featured-projects {
+        margin: 0;
+        padding: 22px;
+    }
+
+    .personal-work > .project-card {
+        flex: 1;
+    }
+
+    .projects-layout h1,
+    .projects-layout h2 {
+        margin-bottom: 12px;
+        font-size: 1.6rem;
+    }
+
+    .projects-layout h3 {
+        margin-bottom: 10px;
+        font-size: 1.15rem;
+    }
+
+    .projects-layout p {
+        margin-bottom: 12px;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .projects-layout .project-grid {
+        gap: 12px;
+        margin-top: 18px;
+    }
+
+    .projects-layout .featured-project {
+        padding: 16px;
+    }
+}
+/* Cultural heritage: forest green */
+#tangkhul-culture {
+    background: linear-gradient(135deg, #173f38, #28594d);
+    border-color: #28594d;
+    color: #ffffff;
+}
+
+#tangkhul-culture .eyebrow {
+    color: #c5e9da;
+}
+
+/* Personal projects: warm cream */
+.projects-layout .project-card {
+    background: #faf5eb;
+    border-color: #dfd4bf;
+}
+
+.projects-layout .project-card .project-card {
+    background: #ffffff;
+}
+
+.projects-layout .project-card h2 {
+    color: #293e36;
+}
+
+/* Professional work: soft sage */
+.featured-projects {
+    background: #e2ece5;
+    border-color: #c4d6c9;
+}
+
+.featured-projects > h2 {
+    color: #173f38;
+}
+
+.featured-project {
+    background: #ffffff;
+    border-color: #d0ddd4;
+    border-top-color: #326b55;
+}
+
+.featured-project h3 a,
+.projects-layout .text-link {
+    color: #245b46;
+}
+.culture-image {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 12px;
+}
+.development-image {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 12px;
+}
+.back-home {
+    margin-top: 10px;
+    margin-bottom: 8px;
+
+}
